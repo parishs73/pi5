@@ -1,0 +1,11 @@
+#cloud-config
+runcmd:
+  - sudo apt update
+  - sudo apt -y upgrade
+users:
+  - name: simon
+    groups: sudo
+    shell: /bin/bash
+    sudo: ["ALL=(ALL) NOPASSWD:ALL"]
+    plain_text_passwd: "Dapume73!"
+    lock_passwd: false
